@@ -1,0 +1,10 @@
+let score = 0;
+const neuron = document.getElementById("neuron");
+const scoreBox = document.getElementById("score");
+
+neuron.addEventListener("click", () => {
+  score++;
+  scoreBox.textContent = score;
+  neuron.style.marginLeft = Math.random()*300 + "px";
+  neuron.style.marginTop = Math.random()*200 + "px";
+});
