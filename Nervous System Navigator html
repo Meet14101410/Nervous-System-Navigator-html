@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nervous System Navigator</title>
+</head>
+<body style="font-family:Arial;text-align:center;">
+  <h2>Nervous System Navigator</h2>
+  <p>Click the neuron to send signals!</p>
+  <h3>Score: <span id="score">0</span></h3>
+
+  <div id="neuron" style="
+    width:80px;height:80px;
+    background:orange;border-radius:50%;
+    margin:40px auto;cursor:pointer;">
+  </div>
+
+  <script>
+    let score = 0;
+    const neuron = document.getElementById("neuron");
+    neuron.onclick = () => {
+      score++;
+      document.getElementById("score").innerText = score;
+      neuron.style.marginLeft = Math.random()*300 + "px";
+      neuron.style.marginTop = Math.random()*200 + "px";
+    }
+  </script>
+</body>
+</html>
